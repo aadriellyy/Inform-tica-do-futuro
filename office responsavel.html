@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Responsável </title>
+
+	<style type="text/css">
+.tabela {
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 10px;
+}
+p {
+	color: blue;
+	
+}
+</style>
+<script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+
+</script>  
+
+</head>
+
+<body bgcolor="#B0E2FF">
+	<center>
+		<form action="" method="post">
+			<table border="0" cellpadding="40" align="center" width="500" cellspacing="0">
+			<TR>
+				<td>
+					<p> <b> NOME DO RESPONSÁVEL: </b> </p>	<br>
+					<input type="text" size="35" id="nome" placeholder="nome completo">
+				</td>
+				<td>
+					<p> <b> CPF: </b> </p> <br>
+					<input type="text" name="cpf" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="___-___-___-__">
+				</td>
+				<td>
+					<label for="email_id"> <p> <b> E-mail: </b> </p> </label> <br>
+					<input type="email" name="email" id="email_id" size="35">
+				</td>
+			</TR>
+			<tr>
+				<td>
+					<label for="Estado"> <p> <b> Estado: </b> </p> </label> <br>
+					<input type="text" nome="Estado" id="EST" list="Estado">
+					<datalist id="Estado">
+					<option value="Acre"></option>
+					<option value="Alagoas"></option>
+					<option value="Amapá"></option>
+					<option value="Amazonas"></option>
+					<option value="Bahia"></option>
+					<option value="Céara"></option>
+					<option value="Espiro Santo"></option>
+					<option value="Goias"></option>
+					<option value="Maranhão"></option>
+					<option value="Mato Grosso"></option>
+					<option value="Mato Grosso do Sul"></option>
+					<option value="Minas Gerais"></option>
+					<option value="Para"></option>
+					<option value="Paraíba"></option>
+					<option value="Paraná"></option>
+					<option value="Pernambuco"></option>
+					<option value="Piauí"></option>
+					<option value="Rio de Janeiro"></option>
+					<option value="Rio Grande do Norte"></option>
+					<option value="Rio Grande do Sul"></option>
+					<option value="Rondônia"></option>
+					<option value="Roraima"></option>
+					<option value="Santa Catarina"></option>
+					<option value="São Paulo"></option>
+					<option value="Sergipe"></option>
+					<option value="Tocantis"></option>
+					<option value="Distrito Federal"></option>
+					</datalist>
+				</td>
+				<td>
+					<p> <b> CEP: </b> </p> <br>
+					<input type="text" name="cep" maxlength="9" OnKeyPress="formatar('#####-###', this)" placeholder="_____-___">
+				</td>
+				<td>
+					<p> <b> Endereço: </b> </p> <br>
+					<input type="text" name="Endereço" size="35">
+				</td>
+				
+			</tr>
+			<tr>
+				<td>
+					<p> <b> TELEFONE: </b> </p> <br>
+					<input type="text" name="tel" maxlength="12" OnKeyPress="formatar('##-####-####', this)" placeholder="__-_____-____">
+				</td>
+
+				<td>
+
+				<div class="método de pagamento">
+						<label for="card" class="cartão do método">
+							<div class="card-logos">
+								<font style="color:blue"> <b> Método de pagamento </b> </font><br><br>
+								<img src="..\img\cartões.jpg" width="100px">
+								
+								
+							</div>
+							<div class="radio-input">
+								<input type="radio" name="pagamento" id="card"> Pague com cartão de crédito
+								
+							</div>
+							
+						</label>
+
+						<label for="boleto" class="method boleto">
+							<img src="..\img\boleto.jpg" width="100px">
+							<div class="radio-input">
+								<input type="radio" name="pagamento" id="boleto"> Pague com boleto 
+								
+							</div>
+						</label> 
+						
+					</div>
+					
+				</td>
+			
+				<td>
+					<p> <b> Número do cartão </b> </p>
+					<input type="text" name="número do cartão" id="número do cartão_id" maxlength="14">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p> <b> Data de validade </b> </p>
+					<div class="mes">
+						<select>
+							<option>01</option>
+							<option>02</option>
+							<option>03</option>
+							<option>04</option>
+							<option>05</option>
+							<option>06</option>
+							<option>07</option>
+							<option>08</option>
+							<option>09</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+						</select>
+						
+					</div>
+					<div class="ano">
+						<select>
+							<option>2021</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+							<option>2026</option>
+							<option>2027</option>
+							<option>2028</option>
+							<option>2029</option>
+							<option>2030</option>
+						</select>
+						
+					</div>
+				</td>
+				<td>
+					<p> <b> Código de segurança </b> </p>
+					<input type="text" name="codigo de segurança" id="codigo de segurança_id" maxlength="3"> <br>
+					É o código de segurança do cartão, número exclusivo de três dígitos no verso do cartão separado do número.
+				</td>
+
+
+				<td>
+					<input type="submit" name="botao" value="enviar">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="office.html"> < Página de anterior </a>
+				</td>
+			</tr>
+
+</body>
+</html>

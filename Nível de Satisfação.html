@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<html lang="pt_br">
+<head>
+	<meta charset="UTF-8">
+	<title>Reserva e Dúvidas</title>
+</head>
+<body bgcolor="#B0E2FF">
+
+<fieldset>
+			<legend>Dados do Aluno</legend>
+    <form action="enviar-email.php" class="formulario" method="post"> 
+        <b><p>Formulário para Reserva de Aulas e Tira-Dúvidas</p></b>
+        
+        <div class="field">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome*" required size="30">
+        </div>
+        <br>
+        <div class="field">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Digite seu Telefone">
+        </div>
+        <br>
+        <div class="field">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu E-Mail*" required>
+        </div>
+        <br>        
+        
+        <div class="field radiobox">
+            <form class="" method="post">
+            <span>Reposição de Aula</span><br>
+            <input type="radio" name="novidades" id="sim" value="sim" checked><label for="sim">Sim</label>
+            <input type="radio" name="novidades" id="nao" value="nao"><label for="nao">Não</label><br><br>
+        </form>
+            <form>
+    Data: <input type="datetime-local" name="bdaytime">
+           </form><br><br>
+           <form class="" method="post">
+            <span>Aula de Tira-Dúvidas</span><br>
+             <input type="radio" name="novidades" id="sim Tira-Dúvidas" value="sim Tira-Dúvidas" checked><label for="sim">Sim</label>
+            <input type="radio" name="novidades" id="nao Tira-Dúvidas" value="nao Tira-Dúvidas"><label for="nao">Não</label><br><br>
+        </form>
+             <form>
+    Data: <input type="datetime-local" name="bdaytime">
+           </form><br><br>
+           <span>Aula no Google Meet</span><br>
+           <td> <a href="http://meet.google.com/euu-twam-qba">GOOGLE MEET</a></td>
+        </div>
+        <br>
+        <div class="field">
+            <label for="mensagem">Sua mensagem:</label>
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem*" required></textarea>
+        </div>
+        <br>
+         Defina seu nível de satisfação:<br>
+    pouco satisfeito
+    <input type="range" name="satisfacao" min="0" max="10">
+    muito satisfeito <br><br>
+
+
+        <input type="submit" name="acao" value="Enviar">
+
+</fieldset>
+</form>
+    </form>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<doctype html>
+<html> 
+<html lang="PT_BR">
+
+	<head>
+		<meta charset="utf-8">
+		<title>teste</title>
+
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}			
+			body{
+				background-color: #B0E2FF;
+				overflow-y: scroll; overflow-x: hidden; 
+			}
+
+			#check{
+				display: none;
+			}
+			#ícone{
+				cursor: pointer;
+				padding: 15px;
+				position: absolute;
+				z-index: 1;
+			}
+
+		.barra{
+			background-color: #333;
+			height: 100%;
+			width: 300px;
+			position: absolute;
+			transition: all .2s linear;
+			left: -300px;
+		}
+
+		nav{
+			width: 100%;
+			position: absolute;
+			top: 60px;
+		}
+
+		nav a{
+			text-decoration: none;
+		}
+
+		.link{
+			background-color: #494950;
+			padding: 20px;
+			font-family: 'arial';
+			font-size: 12pt;
+			transition: all .2s linear;
+			color: #f4f4f9;
+			border-bottom: 2px solid #222;
+			opacity: 0;
+			margin-top: 200px;		
+		}
+
+		.link:hover{
+			background-color: #050542; 
+
+		}
+		
+		#check:checked ~ .barra{
+			transform: translateX(300px);
+
+		}
+
+		#check:checked ~ .barra nav a .link{
+			opacity: 1;
+			margin-top: 0;
+			transition-delay: .2s;
+
+		}
+
+
+
+		</style>
+	</head>
+
+	<body>
+		
+		<input type="checkbox" id="check">
+		<label id="ícone" for="check">  <img src="..\img\menu.png" width="30px;"> <a href="MATERIAL.HTML" target="_top"> <img src="..\img\sino.png" width="35px;"></a>  </label>
+				
+		 
+		<div id="div1" class="barra">
+
+		<nav>
+			<a href="Informática do Futuro.html" target="showframe"><div class="link" target="showframe">Home</div></a>
+			<a href="..\texto\iFrames.pdf" target="showframe"><div class="link" target="showframe">Empresas</div></a>
+			<a href="form.html" target="showframe"><div class="link">Cursos</div></a>
+			<a href="fotos informatica do futuro.html" target="showframe"><div class="link">Fotos</div></a>
+			<a href="videos projeto.html" target="showframe"><div class="link">Vídeos</div></a>
+			<a href="Pagina de matricula.html" target="showframe"><div class="link">Matrícula</div></a>
+			<a href="Preços.html" target="showframe"><div class="link">Preços</div></a>
+			<a href="contato projeto.html" target="showframe"><div class="link">Contato</div></a>
+			<a href="Nível de Satisfação.html" target="showframe"><div class="link">Reserva e dúvida</div></a>
+			<a href="Parceiros.html" target="showframe"><div class="link">Parceiros</div></a>
+
+
+   </nav>
+</div>
+
+	</body>
+	</html>		
